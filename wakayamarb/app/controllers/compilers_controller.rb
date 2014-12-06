@@ -65,10 +65,10 @@ class CompilersController < ApplicationController
 
     fullpath = Rails.root.to_s + "/public" + File.dirname(pathrbname) + "/"
 
-	bname = File.basename(pathrbname).downcase
-	if( bname!=File.basename(pathrbname) )then
-		File.rename( fullpath + File.basename(pathrbname), fullpath + bname )
-	end
+  	bname = File.basename(pathrbname).downcase
+  	if( bname!=File.basename(pathrbname) )then
+  		File.rename( fullpath + File.basename(pathrbname), fullpath + bname )
+  	end
 
     rbfile = File.basename(bname)
     mrbfile = File.basename(bname, ".rb") + ".mrb"
